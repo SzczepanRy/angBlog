@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { ToggleComponent } from './toggle/toggle.component';
+import { ToggleModule } from './toggle/toggle.module';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent],
-  imports: [FormsModule, BrowserModule, AppRoutingModule],
+  imports: [FormsModule, BrowserModule, ToggleModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

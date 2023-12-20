@@ -1,4 +1,4 @@
-<div [hidden]="!fail" class="login">
+<div *ngIf="fail" class="login">
   <input type="text" [(ngModel)]="login" name="login" placeholder="login" />
   <input
     type="password"
