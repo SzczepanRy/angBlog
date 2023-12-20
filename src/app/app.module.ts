@@ -8,9 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ToggleComponent } from './toggle/toggle.component';
 import { ToggleModule } from './toggle/toggle.module';
+import { NavComponent } from './nav/nav.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, NavComponent, ChatComponent],
   imports: [FormsModule, BrowserModule, ToggleModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

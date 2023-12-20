@@ -5,13 +5,20 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--bgColor);
-  color: var(--textColor);
+
   * {
     margin-top: 10px;
 
     button {
       padding: 5px 10px;
     }
+  }
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  .container {
+    height: calc(100vh - 50px);
   }
 }

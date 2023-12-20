@@ -1,5 +1,10 @@
 .toggle {
   position: absolute;
   margin: 5px;
+
   right: 0px;
+  z-index: 200000;
+  button {
+    height: 40px;
+  }
 }

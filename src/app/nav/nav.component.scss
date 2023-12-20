@@ -1,0 +1,16 @@
+.nav {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  background-color: var(--textColor);
+
+  * {
+    background-color: var(--textColor);
+    color: var(--bgColor);
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: overline;
+  }
+}
