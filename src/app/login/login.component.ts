@@ -15,7 +15,7 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   loginFn() {
-    if (this.login == 'a' && this.password == 'a') {
+    if (this.login == 'a' && this.password == 'aaaa') {
       this.fail = false;
       this.router.navigate(['/home']);
     }

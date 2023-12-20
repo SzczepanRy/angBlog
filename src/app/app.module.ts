@@ -10,9 +10,17 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { ToggleModule } from './toggle/toggle.module';
 import { NavComponent } from './nav/nav.component';
 import { ChatComponent } from './chat/chat.component';
+import { PassValidatorDirective } from './passValidator/pass-validator.directive';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, NavComponent, ChatComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    NavComponent,
+    ChatComponent,
+    PassValidatorDirective,
+  ],
   imports: [FormsModule, BrowserModule, ToggleModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
