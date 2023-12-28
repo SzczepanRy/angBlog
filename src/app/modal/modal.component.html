@@ -12,6 +12,6 @@
     {{ passwdControl.errors | json }}
   </div>
   <div class="btn">
-    <button (click)="loginFn()">login</button>
+    <button [disabled]="passwdControl.errors !== null" (click)="loginFn()">login</button>
   </div>
 </div>

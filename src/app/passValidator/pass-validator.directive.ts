@@ -24,6 +24,6 @@ export class PassValidatorDirective implements Validator {
     if (value.length > 3) {
       return null;
     }
-    return { toShort: true };
+    return { 'pasword to short': true };
   }
 }
