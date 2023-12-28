@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,17 +7,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  login: string = '';
-  password: string = '';
-
-  fail: boolean = true;
-
-  constructor(private router: Router) {}
-
-  loginFn() {
-    if (this.login == 'a' && this.password == 'aaaa') {
-      this.fail = false;
-      this.router.navigate(['/home']);
-    }
-  }
+  constructor(public authService: AuthService) {}
 }

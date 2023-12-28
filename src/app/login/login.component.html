@@ -1,21 +1,7 @@
-<div *ngIf="fail" class="login">
-  <input type="text" [(ngModel)]="login" name="login" placeholder="login" />
-  <input
-    type="password"
-    [(ngModel)]="password"
-    name="password"
-    placeholder="password"
-    passValidator
-    #passwdControl="ngModel"
-  />
-  <div *ngIf="passwdControl.errors !== null">
-    {{ passwdControl.errors | json }}
-  </div>
-  <div class="btn">
-    <button (click)="loginFn()">login</button>
-  </div>
+<div  [hidden]="authService.isLoggedIn$ | async" class="login">
+ <app-modal></app-modal>
 </div>
-<div [hidden]="fail" class="main">
+<div *ngIf="authService.isLoggedIn$ | async" class="main">
   <app-nav></app-nav>
   <div class="container">
     <router-outlet></router-outlet>

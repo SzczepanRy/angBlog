@@ -11,6 +11,9 @@ import { ToggleModule } from './toggle/toggle.module';
 import { NavComponent } from './nav/nav.component';
 import { ChatComponent } from './chat/chat.component';
 import { PassValidatorDirective } from './passValidator/pass-validator.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { APP_CONFIG, APP_SERVICE_CONF } from './AppConfig/apponfig.service';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,22 @@ import { PassValidatorDirective } from './passValidator/pass-validator.directive
     NavComponent,
     ChatComponent,
     PassValidatorDirective,
+    ModalComponent,
   ],
-  imports: [FormsModule, BrowserModule, ToggleModule, AppRoutingModule],
-  providers: [],
+  imports: [
+    FormsModule,
+    BrowserModule,
+    ToggleModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ],
+  providers: [
+    {
+      provide: APP_SERVICE_CONF,
+      useValue: APP_CONFIG,
+    },
+    HttpClientModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

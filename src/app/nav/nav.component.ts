@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -6,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
+  constructor(public authService: AuthService) {}
   reset() {
-    window.location.reload();
+    console.log('aA');
+    this.authService.logout();
   }
 }
